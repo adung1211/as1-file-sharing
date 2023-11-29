@@ -8,7 +8,7 @@ class Server:
         self.host_addr = {}
         self.lock = threading.Lock()
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server_socket.bind(('127.0.0.1', 8080))
+        self.server_socket.bind(('192.168.205.132', 8080))
         self.server_socket.listen(5)
     
     def fetch(self, client_socket, fname):

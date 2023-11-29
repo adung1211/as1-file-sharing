@@ -138,6 +138,6 @@ class Client:
         self.send_command()
 
 if __name__ == "__main__":
-    client = Client(("127.0.0.1", 8080))
+    client = Client(("192.168.205.132", 8080))
     client.start()
     
