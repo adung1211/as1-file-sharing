@@ -4,6 +4,8 @@ import threading
 import tqdm
 import json
 
+SEVER_LOCAL_IP = '192.168.205.132'
+
 
 class Client:
     def __init__(self, server_address):
@@ -138,6 +140,6 @@ class Client:
         self.send_command()
 
 if __name__ == "__main__":
-    client = Client(("192.168.205.132", 8080))
+    client = Client((SERVER_LOCAL_IP, 8080))
     client.start()
     

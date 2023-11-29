@@ -2,13 +2,15 @@ import socket
 import threading
 import json
 
+LOCAL_IP = '192.168.205.132'
+
 class Server:
     def __init__(self):
         self.clients = {}
         self.host_addr = {}
         self.lock = threading.Lock()
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server_socket.bind(('192.168.205.132', 8080))
+        self.server_socket.bind((LOCAL_IP, 8080))
         self.server_socket.listen(5)
     
     def fetch(self, client_socket, fname):
